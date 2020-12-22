@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "build": "rimraf ./dist && tsc",
     "test": "jest",
-    "lint": "eslint ./src",
-    "start": "ts-node ./src/index.ts"
+    "test:cov": "jest --coverage", 
+    "lint": "eslint ./src"
   },
   "author": "",
   "license": "ISC",

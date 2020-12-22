@@ -1,4 +1,4 @@
-"use strict";
+'use strict'
 module.exports = {
     roots: ['<rootDir>/src'],
     transform: {
@@ -10,5 +10,5 @@ module.exports = {
     ],
     collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
     testTimeout: 5000,
-    testEnvironment: 'node'
-};
+    testEnvironment: 'node',
+}

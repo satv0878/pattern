@@ -9,16 +9,16 @@ export class MoveOnRails implements MoveBehavior {
 }
 export class MoveOnRoad implements MoveBehavior {
     move(): string {
-        return 'i am a Car'
+        return 'i am a car'
     }
 }
 export class MoveInAir implements MoveBehavior {
     move(): string {
-        return 'i am an Airplane'
+        return 'i am an airplane'
     }
 }
 export class MoveOnWater implements MoveBehavior {
     move(): string {
-        return 'i am a ship '
+        return 'i am a ship'
     }
 }

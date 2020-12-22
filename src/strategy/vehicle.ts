@@ -9,7 +9,7 @@ export class Vehicle {
     public maxSpeed: number
 
     go() {
-        console.log(this.moveBehavior.move())
+        return this.moveBehavior.move()
     }
 
     public setMoveBehavior(mb: MoveBehavior) {
@@ -17,7 +17,7 @@ export class Vehicle {
     }
 
     public setMaxSpeed(speed: number) {
-        this.maxSpeed == speed
+        this.maxSpeed = speed
     }
 }
 
