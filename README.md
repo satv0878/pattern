@@ -1,5 +1,7 @@
 # Example design pattern project
 
+check out the spec files
+
 ## run tests
 
 ```bash
