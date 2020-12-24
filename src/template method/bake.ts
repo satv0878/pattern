@@ -16,6 +16,14 @@ export abstract class BreadMaker {
     abstract addSalt()
     abstract addNuts()
 
+    // a hook  has normally no or default implementation
+    isInChristmasMood(): boolean {
+        return true
+    }
+
+    private addCinomon(): number {
+        return 3
+    }
     private addYeast(): number {
         return 5
     }
