@@ -5,6 +5,7 @@ Example implementations for:
 -   Singleton
 -   Template method
 -   Strategy Pattern
+-   Abstract Factory
 
 Check out the spec files !
 
