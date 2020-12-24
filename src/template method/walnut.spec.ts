@@ -1,4 +1,4 @@
-import { WalnutBread } from './Walnut'
+import { WalnutBread } from './walnut'
 describe('test template method pattern', () => {
     it('should ', () => {
         const walnut: WalnutBread = new WalnutBread()
