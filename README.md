@@ -11,5 +11,5 @@ npm run test
 ## run test with coverage
 
 ```bash
-npm run test
+npm run test:cov
 ```
