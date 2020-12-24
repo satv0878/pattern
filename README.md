@@ -1,6 +1,12 @@
 # Example design pattern project
 
-check out the spec files
+Example implementations for:
+
+-   Singleton
+-   Template method
+-   Strategy Pattern
+
+Check out the spec files !
 
 ## run tests
 
