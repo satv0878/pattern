@@ -1,6 +1,4 @@
-import { AbstractAudi, AbstractMercedes } from './abstractProducts'
-
+import { Car } from './car'
 export interface AbstractCarFactory {
-    createMercedes(): AbstractMercedes
-    createAudi(): AbstractAudi
+    createCar(brand: string): Car
 }

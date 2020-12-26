@@ -1,13 +1,14 @@
 import { AbstractCarFactory } from './abstractFactory'
-import { AbstractAudi, AbstractMercedes } from './abstractProducts'
+import { Car } from './car'
 import { Audi, Mercedes } from './concreteProducts'
 
 export class CarFactory implements AbstractCarFactory {
-    createMercedes(): AbstractMercedes {
-        return new Mercedes()
-    }
-
-    createAudi(): AbstractAudi {
-        return new Audi()
+    createCar(brand: string): Car {
+        if (brand === 'audi') {
+            return new Audi()
+        }
+        if (brand === 'mercedes') {
+            return new Mercedes()
+        }
     }
 }

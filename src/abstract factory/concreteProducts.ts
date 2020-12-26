@@ -1,11 +1,11 @@
-import { AbstractAudi, AbstractMercedes } from './abstractProducts'
+import { Car } from './car'
 
-export class Audi implements AbstractAudi {
+export class Audi extends Car {
     drive() {
         return 'driving fast'
     }
 }
-export class Mercedes implements AbstractMercedes {
+export class Mercedes extends Car {
     drive() {
         return 'driving chic'
     }
