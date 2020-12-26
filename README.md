@@ -17,12 +17,12 @@ Check out the spec files !
 
 ## run tests
 
-```bash
+```shell
 npm run test
 ```
 
 ## run test with coverage
 
-```bash
+```shell
 npm run test:cov
 ```
