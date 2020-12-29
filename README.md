@@ -4,14 +4,16 @@
 
 Example implementations for:
 
--   Singleton
+-   Singleton:
     -   simple database interface
--   Template method
+-   Template method:
     -   a template for baking bread
--   Strategy Pattern
+-   Strategy Pattern:
     -   a strategy for different ways of public transports
--   Simple Factory
+-   Simple Factory:
     -   car factory for different brands
+-   Decorator:
+    -   a decorator for calculating the cost of adding different condiments
 
 Check out the spec files !
 

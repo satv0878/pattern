@@ -1,20 +1,19 @@
 import { Car } from './car'
-import { CarFactory } from './concreteFactory'
-import { CarRetailer } from './productions'
+import { AudiRetailer, CarRetailer } from './productions'
 
 describe('car factory', () => {
-    let factory: CarFactory
+    //let factory: AudiFactory
     let retailer: CarRetailer
     beforeEach(() => {
-        factory = new CarFactory()
-        retailer = new CarRetailer(factory)
+        //factory = new AudiFactory()
+        retailer = new AudiRetailer()
     })
     it('should create a car', () => {
-        let car: Car = retailer.buyCar('audi')
+        let car: Car = retailer.buyCar('offroad')
+        expect(car.drive()).toBe('driving offroad')
+    })
+    it('should create a car', () => {
+        let car: Car = retailer.buyCar('fast')
         expect(car.drive()).toBe('driving fast')
-    })
-    it('should create a car', () => {
-        let car: Car = retailer.buyCar('mercedes')
-        expect(car.drive()).toBe('driving chic')
     })
 })

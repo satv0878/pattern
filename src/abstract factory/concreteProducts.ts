@@ -1,12 +1,25 @@
 import { Car } from './car'
 
-export class Audi extends Car {
+//concrete Products
+
+export class AudiRS8 extends Car {
     drive() {
         return 'driving fast'
     }
 }
-export class Mercedes extends Car {
+
+export class AudiQuattro extends Car {
     drive() {
-        return 'driving chic'
+        return 'driving offroad'
+    }
+}
+export class MercedesAMG extends Car {
+    drive() {
+        return 'driving chic and fast'
+    }
+}
+export class MercedesGClass extends Car {
+    drive() {
+        return 'driving chic and dirty'
     }
 }

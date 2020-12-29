@@ -1,3 +1,5 @@
+//abstract Product
+
 export abstract class Car {
     drive(): string {
         return 'driving'
