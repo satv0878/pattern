@@ -4,19 +4,39 @@
 
 Example implementations for:
 
+---
+
+## Creational
+
 -   Singleton:
+
     -   simple database interface
+
+-   Simple Factory:
+    -   car factory for different brands
+
+---
+
+## Structural
+
+-   Decorator:
+    -   a decorator for calculating the cost of adding different condiments
+
+---
+
+## Behavioral
+
 -   Template method:
     -   a template for baking bread
 -   Strategy Pattern:
+
     -   a strategy for different ways of public transports
--   Simple Factory:
-    -   car factory for different brands
--   Decorator:
-    -   a decorator for calculating the cost of adding different condiments
+
 -   Observer:
 
     -   covid case counter notifies an incidence calculator
+
+---
 
     **_Check out the spec files !_**
 
