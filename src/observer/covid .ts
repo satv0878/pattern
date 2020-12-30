@@ -2,36 +2,95 @@
 /// observer 1: incidence calculator
 /// observer 2: catgorization
 
-interface Subject {
+export interface Subject {
     registerObserver(o: Observer)
-
     removeObserver(o: Observer)
     notifyObserver()
 }
 
-interface Observer {
-    update()
+export interface Observer {
+    update(covidCases: number)
 }
 
-class CovidSubject implements Subject {
+export interface IncidenceCalculator {
+    calculateIncidence(cases: number)
+    getIncidence()
+}
+export interface AVGCalculator {
+    calculateAverage(cases: number)
+}
+
+export class IncidenceGermany implements IncidenceCalculator, Observer {
+    private inhabitants: number
+    private incidence: number
+
+    constructor(inhabitants: number) {
+        this.inhabitants = inhabitants
+    }
+
+    update(covidCases: number) {
+        this.calculateIncidence(covidCases)
+    }
+
+    calculateIncidence(covidCases: number) {
+        this.incidence = (covidCases / this.inhabitants) * 100000
+    }
+
+    getIncidence(): number | null {
+        return this.incidence ? this.incidence : null
+    }
+}
+
+export class AverageGermany implements AVGCalculator, Observer {
+    private inhabitants: number
+    private average: number
+
+    constructor(inhabitants: number) {
+        this.inhabitants = inhabitants
+    }
+
+    update(covidCases: number) {
+        this.calculateAverage(covidCases)
+    }
+
+    calculateAverage(covidCases: number) {
+        this.average = covidCases / this.inhabitants
+    }
+
+    getAverage(): number | null {
+        return this.average ? this.average : null
+    }
+}
+
+export class CovidSubject implements Subject {
     observerList: Array<Observer>
 
-    registerObserver(o: Observer) {
+    private covidCasesLast7Days: number
+
+    constructor() {
+        this.observerList = []
+    }
+
+    public registerObserver(o: Observer) {
         this.observerList.push(o)
     }
 
-    notifyObserver() {
+    public notifyObserver() {
         this.observerList.forEach((o) => {
-            o.update()
+            o.update(this.covidCasesLast7Days)
         })
     }
 
-    removeObserver(o: Observer) {
+    public removeObserver(o: Observer) {
         const index = this.observerList.indexOf(o, 0)
         if (index > -1) this.observerList.splice(index, 1)
     }
 
-    covidNumbersChange() {
+    public setCovidCases(cases: number) {
+        this.covidCasesLast7Days = cases
+        this.covidNumbersChange()
+    }
+    private covidNumbersChange() {
         this.notifyObserver()
     }
 }

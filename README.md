@@ -18,7 +18,7 @@ Example implementations for:
 
     -   covid case counter notifies an incidence calculator
 
-    Check out the spec files !
+    **_Check out the spec files !_**
 
 ## run tests
 
