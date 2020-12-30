@@ -14,8 +14,11 @@ Example implementations for:
     -   car factory for different brands
 -   Decorator:
     -   a decorator for calculating the cost of adding different condiments
+-   Observer:
 
-Check out the spec files !
+    -   covid case counter notifies an incidence calculator
+
+    Check out the spec files !
 
 ## run tests
 
